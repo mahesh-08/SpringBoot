@@ -11,6 +11,7 @@ public class ProductServiceImpl implements ProductService {
 	@Autowired
 	private ProductRepository repository;
 	
+	
 
 	public Iterable<Product> getAllProducts() {
 		return repository.findAll();

@@ -13,6 +13,7 @@
 	<artifactId>product-management-with-h2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>product-management</name>
+	<packaging>jar</packaging>
 	<description>Product Managment App</description>
 
 	<properties>
