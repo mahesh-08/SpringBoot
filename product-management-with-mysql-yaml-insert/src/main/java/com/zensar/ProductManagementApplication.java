@@ -1,6 +1,5 @@
 package com.zensar;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -9,21 +8,24 @@ import com.zensar.controller.ProductController;
 import com.zensar.entites.Product;
 
 @SpringBootApplication
-public class ProductManagementApplication  {
+public class ProductManagementApplication  { //implements CommandLineRunner
 
 	//@Autowired
 	//private ProductController controller;
 	//private static ConfigurableApplicationContext context;
 
 	public static void main(String[] args) throws Exception {
-		ConfigurableApplicationContext context = SpringApplication.run(ProductManagementApplication.class, args);
-		test(context);
+		
+		SpringApplication.run(ProductManagementApplication.class, args);
+		
+		//ConfigurableApplicationContext context = SpringApplication.run(ProductManagementApplication.class, args);
+		//test(context);
 	}
 
 
 	public static void test(ConfigurableApplicationContext context) throws Exception {
-		System.out.println("++++++++++++++++++++++++++++++++++++++"+context);
-		ProductController productController =  context.getBean("productController",ProductController.class);
+	
+		ProductController productController =  context.getBean("myCtrl",ProductController.class);
 
 		Product product = new Product();
 		product.setProductId(1);

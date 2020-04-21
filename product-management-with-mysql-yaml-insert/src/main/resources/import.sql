@@ -1,0 +1,1 @@
+insert into product values(11,11,"hi");

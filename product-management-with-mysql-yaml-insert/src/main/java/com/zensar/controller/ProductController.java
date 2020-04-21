@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.zensar.entites.Product;
 import com.zensar.services.ProductService;
 
-@RestController
+@RestController(value = "myCtrl")
 @RequestMapping("/products")
 public class ProductController {
 	
